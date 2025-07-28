@@ -1,0 +1,126 @@
+<!-- Header -->
+<div class="header">
+  <div class="header-content">
+    <h1>Descubre Recetas Deliciosas</h1>
+    <p>Miles de recetas fáciles y sabrosas para cada ocasión</p>
+
+    <div class="search-box">
+      <input
+        pInputText
+        type="text"
+        placeholder="Buscar recetas, ingredientes…"
+      />
+      <p-button
+        pButton
+        type="button"
+        label="Buscar"
+        icon="pi pi-search"
+      ></p-button>
+    </div>
+  </div>
+</div>
+
+<!-- Categorías -->
+<div class="categories">
+  <h2>Categorías</h2>
+  <div class="category-buttons">
+    <p-button
+      pButton
+      label="Todas"
+      class="p-button-rounded p-button-text"
+    ></p-button>
+    <p-button
+      pButton
+      label="Italiana"
+      class="p-button-rounded p-button-text"
+    ></p-button>
+    <p-button
+      pButton
+      label="Mexicana"
+      class="p-button-rounded p-button-text"
+    ></p-button>
+    <p-button
+      pButton
+      label="Asiática"
+      class="p-button-rounded p-button-text"
+    ></p-button>
+    <p-button
+      pButton
+      label="Ensaladas"
+      class="p-button-rounded p-button-text"
+    ></p-button>
+    <p-button
+      pButton
+      label="Postres"
+      class="p-button-rounded p-button-text"
+    ></p-button>
+    <p-button
+      pButton
+      label="Vegetariana"
+      class="p-button-rounded p-button-text"
+    ></p-button>
+  </div>
+</div>
+
+<!-- Recetas Populares -->
+<div class="recipes-section">
+  <h2>Recetas Populares</h2>
+
+  <div class="recipe-grid">
+    <p-card *ngFor="let recipe of recipes">
+      <ng-template pTemplate="header">
+        <img
+          [src]="recipe.imageUrl || 'https://via.placeholder.com/150'"
+          alt="{{ recipe.title }}"
+        />
+      </ng-template>
+      <ng-template pTemplate="content">
+        <p>{{ recipe.description }}</p>
+        <p>
+          <i class="pi pi-clock"></i> 30 min &nbsp;
+          <i class="pi pi-users"></i> 4 &nbsp; <i class="pi pi-star"></i> 4.8
+        </p>
+      </ng-template>
+    </p-card>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>RecetasFáciles</h3>
+      <p>Tu destino para recetas deliciosas y fáciles de preparar.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Recetas</h4>
+      <ul>
+        <li>Desayunos</li>
+        <li>Almuerzos</li>
+        <li>Cenas</li>
+        <li>Postres</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Comunidad</h4>
+      <ul>
+        <li>Blog</li>
+        <li>Foro</li>
+        <li>Eventos</li>
+        <li>Newsletter</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Soporte</h4>
+      <ul>
+        <li>Ayuda</li>
+        <li>Contacto</li>
+        <li>Privacidad</li>
+        <li>Términos</li>
+      </ul>
+    </div>
+  </div>
+</footer>
